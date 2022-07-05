@@ -1,0 +1,142 @@
+
+body,h1,p {
+  margin: 0;
+}
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+:root{
+    --very-dark-blue-main: hsl(217, 54%, 11%);
+    --very-dark-blue-card: hsl(216, 50%, 16%);
+    --very-dark-blue: hsl(215, 32%, 27%);
+    --eth-color: hsl(178, 100%, 50%);
+    --eth-color-transparent: hsla(178, 100%, 50%, 0.5);
+    --white: hsl(0, 0%, 100%);
+    --font: 'Outfit', sans-serif;
+    --border-radius: 20px;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body{
+    font-family: var(--font);
+    background-color: var(--very-dark-blue-main);
+}
+p{
+    color: rgb(116, 137, 158);
+}
+.logo{
+    position: relative;
+    cursor: pointer;
+}
+.logo-pic{
+    border-radius: var(--border-radius); 
+    width: 100%;
+}
+h1{
+    color: white;
+}
+.container{
+    width: 90%;
+    max-width: 320px;
+    background-color: var(--very-dark-blue-card);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    gap: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+
+}
+.logo:hover .hover{
+    opacity: 1;
+  }
+.hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: url(images/icon-view.svg) center no-repeat;
+    background-color: var(--eth-color-transparent);
+    border-radius: var(--border-radius);
+    opacity: 0;
+    transition: .2s;
+}
+.count-down{
+    justify-content: space-between;
+    display: flex;
+}
+
+.eth, .days{
+    width: 50%;
+    gap: .5rem;
+    display: flex;
+}
+
+.days{
+    justify-content: flex-end;
+}
+
+.eth p{
+    color: var(--eth-color);
+}
+
+.divider-line{
+    border-top: 1px solid var(--very-dark-blue);
+}
+.avatar-tag,
+.avatar-name{
+  transition: .5s;
+}
+
+.avatar-tag:hover,
+.avatar-name:hover{
+  color: var(--eth-color);
+  cursor: pointer;
+}
+
+.creator img{
+    width: 1.8rem;
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+.creator span{
+    color: white;
+}
+
+.creator{
+    gap: 1rem;
+    align-items: center;
+    display: flex;
+}
+
+.attribution{
+  color: white;
+  font-size: .8rem;
+}
+
+.attribution a{
+  color: white;
+  text-decoration: none;
+  transition: .5s;
+}
+
+.attribution a:hover{
+  color:var(--eth-color);
+}
